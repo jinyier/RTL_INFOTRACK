@@ -36,7 +36,7 @@ OS: CentOS 7
 positional arguments:
   file_list
 
-optional arguments:
+other arguments:
   -h, --help            show this help message and exit
   -I INCLUDE, --include INCLUDE
                         Include path
@@ -45,7 +45,7 @@ optional arguments:
   --taint-source TAINT_SOURCE
                         Partially supplants the `nd_taint_source' variable.
   --taint-target TAINT_TARGET
-                        Partially supplants the `nd_taint_target' variable.
+                        Partially supplants the `nd_taint_target' variable. 
   --no-reorder          No reordering of binding dataflow
   --gen-bind-file       Generate a human readable file containing data
                         bindings.
