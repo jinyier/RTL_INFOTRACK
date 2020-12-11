@@ -1,0 +1,63 @@
+# RTL_INFOTRACK
+The repo contains the binary to perform RTL information tracking for hardware Trojan and hardware vulnerabilities detection and tracking.
+
+* More details will be added.
+
+* Version history
+  - Version 1.0; 11/19/2020 % This is the initial version (but quite complete)
+	
+* Contacts: 
+    - Yier Jin : yier.jin@ece.ufl.edu
+
+
+1. Working environment
+
+python 3
+
+PyVerilog
+
+IcalusVerilog
+
+Graphviz
+
+OS: CentOS 7
+
+2. Help Manual
+
+  > taint_tracker --help
+  
+  usage: taint_tracker [-h] [-I INCLUDE] [-D DEFINE] [--toplevel TOPLEVEL]
+                     [--taint-source TAINT_SOURCE]
+                     [--taint-target TAINT_TARGET] [--no-reorder]
+                     [--gen-bind-file] [--render-graph] [--dump-terms]
+                     [--dump-binds] [--dump-graph-nodes] [--dump-path]
+                     file_list [file_list ...]
+
+positional arguments:
+  file_list
+
+other arguments:
+  -h, --help            show this help message and exit
+  -I INCLUDE, --include INCLUDE
+                        Include path
+  -D DEFINE             macro definition
+  --toplevel TOPLEVEL   Toplevel module.
+  --taint-source TAINT_SOURCE
+                        Partially supplants the `nd_taint_source' variable.
+  --taint-target TAINT_TARGET
+                        Partially supplants the `nd_taint_target' variable. 
+  --no-reorder          No reordering of binding dataflow
+  --gen-bind-file       Generate a human readable file containing data
+                        bindings.
+  --render-graph        Render data-flow graph
+  --dump-terms          Dump file containing terms dictionary
+  --dump-binds          Dump file containing binds dictionary
+  --dump-graph-nodes    Plain-text dump of graph nodes
+  --dump-path           Dump path traversal from taint source to taint target
+
+
+# Known Issues
+
+Taint Tracker leverages PyVerilog for parsing. Note that PyVerilog may not support all Verilog syntax, so do the Taint Tracker (although we try to solve the problem now).
+
+
